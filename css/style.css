@@ -180,3 +180,16 @@ p {
   align-self: center;
   margin-top: 3rem;
 }
+
+/* === Footer === */
+/* Contactanos */
+.form-control {
+  text-align: justify !important;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 15px;
+  resize: none;
+}

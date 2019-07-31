@@ -192,6 +192,10 @@ p {
   width: 40%;
   justify-content: center;
 }
+.form-container img{
+  width: 225px;
+  height: 225px;
+}
 .form-container button{
   margin: 2rem;
 }

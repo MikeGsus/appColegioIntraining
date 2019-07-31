@@ -22,7 +22,7 @@ html {
 }
 
 .navbar{
-  width: 80%
+  width: 80%;
 }
 
 .nav ul {
@@ -179,6 +179,21 @@ p {
 .about a {
   align-self: center;
   margin-top: 3rem;
+}
+/*===Section Kinder === */
+.row{
+  display: flex;
+}
+.information{
+  width: 60%;
+}
+.form-container{
+  display: grid;
+  width: 40%;
+  justify-content: center;
+}
+.form-container button{
+  margin: 2rem;
 }
 
 /* === Footer === */

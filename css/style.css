@@ -191,7 +191,7 @@ p {
 /*===Section Kinder === */
 .row{
   display: flex;
-  margin: 20px;
+  margin: 5rem;
 }
 .information{
   width: 60%;

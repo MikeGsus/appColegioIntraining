@@ -279,12 +279,12 @@ p {
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-bottom: 20px;
 }
 main {
   max-width: 100%;
   padding: 40px 60px;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
 
 main section {
@@ -322,12 +322,17 @@ main input:checked + label {
   border-top: 2px solid #5F7C99;
   border-bottom: 1px solid #fff;
 }
-
-#tab1:checked ~ #content1,
+#missiont:checked ~ #mission,
+#vissiont:checked ~ #vission,
+#objetivet:checked ~ #objetive,
+#valorst:checked ~ #valors,
 #tab2:checked ~ #content2 {
   display: block;
 }
 
+#valors span{
+  font-weight: bold;
+}
 @media screen and (max-width: 800px) {
   main label {
     font-size: 0;

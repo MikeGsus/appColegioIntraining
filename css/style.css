@@ -274,7 +274,177 @@ p {
   align-self: center;
 }
 
-/* === Footer === */
+/* === About Us === */
+.about-us{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+main {
+  max-width: 100%;
+  padding: 40px 60px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+main section {
+  display: none;
+  padding: 20px 0 0;
+}
+
+main input {
+  display: none;
+}
+
+main label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #CFDAE6;
+  border: 1px solid transparent;
+}
+
+main label:before {
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+main label:hover {
+  color: #5F7C99;
+  cursor: pointer;
+}
+
+main input:checked + label {
+  color: #5F7C99;
+  border: 1px solid #CFDAE6;
+  border-top: 2px solid #5F7C99;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  main label {
+    font-size: 0;
+  }
+  main label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main label {
+    padding: 15px;
+  }
+}
+
+.organigrama * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.organigrama ul {
+	padding-top: 20px;
+  position: relative;
+  display: flex;
+}
+
+.organigrama li {
+  text-align: center;
+	list-style-type: none;
+	padding: 20px 5px 0px 5px;
+  position: relative;
+}
+
+.organigrama li::before, .organigrama li::after {
+	content: '';
+	position: absolute;
+  top: 0px;
+  right: 50%;
+	border-top: 1px solid #5F7C99;
+	width: 50%;
+  height: 20px;
+}
+
+.organigrama li::after{
+	right: auto;
+  left: 50%;
+	border-left: 1px solid #5F7C99;
+}
+
+.organigrama li:only-child::before, .organigrama li:only-child::after {
+	display: none;
+}
+
+.organigrama li:only-child {
+  padding-top: 0;
+}
+
+.organigrama li:first-child::before, .organigrama li:last-child::after{
+	border: 0 none;
+}
+
+.organigrama li:last-child::before{
+	border-right: 1px solid #5F7C99;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+}
+
+.organigrama li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+.organigrama ul ul::before {
+	content: '';
+	position: absolute;
+  top: 0;
+  left: 50%;
+	border-left: 1px solid #5F7C99;
+	width: 0;
+  height: 20px;
+}
+
+.organigrama li a {
+	border: 1px solid #5F7C99;
+	padding: 1em 0.75em;
+	text-decoration: none;
+	color: #333;
+  background-color: rgba(255,255,255,0.5);
+	font-family: arial, verdana, tahoma;
+	font-size: 0.85em;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.organigrama li a:hover {
+	color: #FFF;
+  background-color: #5F7C99;
+	display: inline-block;
+}
+
+.organigrama > ul > li > a {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.organigrama > ul > li > ul > li > a {
+  width: 8em;
+}
+
 /* Contactanos */
 .form-control {
   text-align: justify !important;

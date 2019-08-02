@@ -58,6 +58,8 @@ First they have a carousel of images about the schoolar level, then the graduate
 
 In the views above, when users click over "Inscribete ya" will show a form where can submit their information for begin the inscription.
 
+![Inscription Form - Wirefrime](image/Inscripción.png)
+
 ##### _Instalaciones_
 
 On this view there is a carousel with ramdon photos about green areas, instalations and student life. Under, another photos and details.

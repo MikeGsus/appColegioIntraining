@@ -463,7 +463,7 @@ main input:checked + label {
 #front:checked ~ #front-s{
   display: flex;
 }
-#secondary input {
+#front, #back{
   display: none;
 }
 

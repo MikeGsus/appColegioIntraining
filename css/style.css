@@ -326,7 +326,8 @@ main input:checked + label {
 #vissiont:checked ~ #vission,
 #objetivet:checked ~ #objetive,
 #valorst:checked ~ #valors,
-#tab2:checked ~ #content2 {
+#tab2:checked ~ #content2,
+#back:checked ~ #back-s {
   display: block;
 }
 
@@ -451,7 +452,37 @@ main input:checked + label {
 }
 
 /* === Education levels form === */
+#secondary .form-container{
+  background: url("../img/joven.jpg") no-repeat center;
+}
 
+#secondary section {
+  display: none;
+  padding: 20px 0 0;
+}
+#front:checked ~ #front-s{
+  display: flex;
+}
+#secondary input {
+  display: none;
+}
+
+#front-label{
+  margin: 0 auto;
+  padding: 10px;
+  background: #5F7C99;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  align-self: center;
+
+}
+#front-label:hover{
+  color: #5F7C99;
+  background-color: #FFF;
+  border: 1px solid #E6E1CF;
+}
+/*
 .flip {
     position: relative; }
     .flip>.front,
@@ -475,13 +506,14 @@ main input:checked + label {
     }
     .flip:hover>.front {
             transform: rotateY(180deg);
+            opacity: 0;
         }
         .flip:hover>.back {
-            opacity: 1;
             transform: rotateY(0deg);
+            opacity: 1;
         }
 
-/*.flip {
+.flip {
     position: relative;
     display: inline-block;
     margin-right: 2px;

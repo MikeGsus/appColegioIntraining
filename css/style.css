@@ -264,7 +264,7 @@ p {
 }
 .form-container img, img{
   object-fit: cover;
-  height: 225px;
+  width: 100%;
 }
 .form-container button{
   margin: 2rem;
@@ -451,15 +451,24 @@ main input:checked + label {
 }
 
 /* === Education levels form === */
+
+#kinder .form-container{
+  background: url("../img/n_kinder.jpg") no-repeat center;
+}
+
+#elementary .form-container{
+  background: url("../img/niño.jpg") no-repeat center;
+}
+
 #secondary .form-container{
   background: url("../img/joven.jpg") no-repeat center;
 }
 
-#secondary section {
+#kinder section, #elementary section, #secondary section {
   display: none;
   padding: 20px 0 0;
 }
-#secondary .form-container label:not(.icon-back) {
+#kinder .form-container label:not(.icon-back), #elementary .form-container label:not(.icon-back), #secondary .form-container label:not(.icon-back) {
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 2px 2px #000;

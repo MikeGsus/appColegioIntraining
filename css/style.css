@@ -547,8 +547,76 @@ main input:checked + label {
   height: 1rem;
 }
 
+/*=== Gallery ===*/
+#gallery{
+  display: grid;
+  margin-left: 60px;
+  margin-right: 60px;
+}
 
-/* Contactanos */
+#gallery .form-container{
+  display: inline-block;
+  width: 60%;
+  height: 75vh;
+  margin: 30px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  perspective: 1700px;
+  perspective-origin: 0 50%;
+  transition: width 0.4s;
+}
+#gallery figure{
+  margin: 0;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  color: #FFF;
+}
+#gallery figure > div{
+  overflow: hidden;
+}
+#gallery figure img{
+  display: block;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  transition: width transform 0.4s;
+}
+#gallery .form-container:hover figure img{
+  transform: translateX(100%);
+  width: 50%;
+}
+#gallery .form-container:hover{
+  width: 100%;
+}
+#gallery figcaption{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  transform: rotateY(-90deg);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  background: #5F7C99;
+}
+#gallery .form-container:hover figure figcaption{
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+#gallery .information {
+  width: 100%;
+}
+/*=== /Gallery ===*/
+
+
+/*=== Contactanos ===*/
 .form-control {
   text-align: justify !important;
   margin-top: 10px;

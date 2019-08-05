@@ -26,6 +26,26 @@ footer{
   margin: -0.5rem;
 }
 
+button{
+  font-family: "nunito";
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.btn-success{
+  background: #5F7C99;
+  color: #fff;
+}
+.btn-warning, .btn-success:hover{
+  background: #fff;
+  color: #5F7C99;
+  border: 2px solid #5F7C99;
+}
+.btn-warning:hover{
+  background: #99906B;
+  color: #fff;
+  border: 2px solid #99906B;
+}
 
 /* === Section Navbar === */
 .logo {
@@ -452,26 +472,25 @@ main input:checked + label {
 
 /* === Education levels form === */
 
+
 #kinder .form-container{
   background: url("../img/n_kinder.jpg") no-repeat center;
+  padding: 0;
 }
 
 #elementary .form-container{
   background: url("../img/niño.jpg") no-repeat center;
+  padding: 0;
 }
 
 #secondary .form-container{
   background: url("../img/joven.jpg") no-repeat center;
+  padding: 0;
 }
 
 #kinder section, #elementary section, #secondary section {
   display: none;
   padding: 20px 0 0;
-}
-#kinder .form-container label:not(.icon-back), #elementary .form-container label:not(.icon-back), #secondary .form-container label:not(.icon-back) {
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 2px #000;
 }
 
 #front:checked ~ #front-s{
@@ -490,6 +509,17 @@ main input:checked + label {
 #back:checked ~ #back-s {
   display: initial;
   height: 43rem;
+  width: 100%;
+  height: 100%;
+  background: #E6E1CF;
+}
+#back-s form{
+  margin: 0 2.5rem;
+}
+
+
+#back:checked ~ .form-container {
+  padding: 0;
 }
 
 #front, #back{
@@ -517,8 +547,76 @@ main input:checked + label {
   height: 1rem;
 }
 
+/*=== Gallery ===*/
+#gallery{
+  display: grid;
+  margin-left: 60px;
+  margin-right: 60px;
+}
 
-/* Contactanos */
+#gallery .form-container{
+  display: inline-block;
+  width: 60%;
+  height: 75vh;
+  margin: 30px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  perspective: 1700px;
+  perspective-origin: 0 50%;
+  transition: width 0.4s;
+}
+#gallery figure{
+  margin: 0;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  color: #FFF;
+}
+#gallery figure > div{
+  overflow: hidden;
+}
+#gallery figure img{
+  display: block;
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  transition: width transform 0.4s;
+}
+#gallery .form-container:hover figure img{
+  transform: translateX(100%);
+  width: 50%;
+}
+#gallery .form-container:hover{
+  width: 100%;
+}
+#gallery figcaption{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  transform: rotateY(-90deg);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  background: #5F7C99;
+}
+#gallery .form-container:hover figure figcaption{
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+#gallery .information {
+  width: 100%;
+}
+/*=== /Gallery ===*/
+
+
+/*=== Contactanos ===*/
 .form-control {
   text-align: justify !important;
   margin-top: 10px;

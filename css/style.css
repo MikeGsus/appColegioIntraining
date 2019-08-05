@@ -26,6 +26,26 @@ footer{
   margin: -0.5rem;
 }
 
+button{
+  font-family: "nunito";
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.btn-success{
+  background: #5F7C99;
+  color: #fff;
+}
+.btn-warning, .btn-success:hover{
+  background: #fff;
+  color: #5F7C99;
+  border: 2px solid #5F7C99;
+}
+.btn-warning:hover{
+  background: #99906B;
+  color: #fff;
+  border: 2px solid #99906B;
+}
 
 /* === Section Navbar === */
 .logo {
@@ -452,26 +472,25 @@ main input:checked + label {
 
 /* === Education levels form === */
 
+
 #kinder .form-container{
   background: url("../img/n_kinder.jpg") no-repeat center;
+  padding: 0;
 }
 
 #elementary .form-container{
   background: url("../img/niño.jpg") no-repeat center;
+  padding: 0;
 }
 
 #secondary .form-container{
   background: url("../img/joven.jpg") no-repeat center;
+  padding: 0;
 }
 
 #kinder section, #elementary section, #secondary section {
   display: none;
   padding: 20px 0 0;
-}
-#kinder .form-container label:not(.icon-back), #elementary .form-container label:not(.icon-back), #secondary .form-container label:not(.icon-back) {
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 2px 2px 2px #000;
 }
 
 #front:checked ~ #front-s{
@@ -490,6 +509,17 @@ main input:checked + label {
 #back:checked ~ #back-s {
   display: initial;
   height: 43rem;
+  width: 100%;
+  height: 100%;
+  background: #E6E1CF;
+}
+#back-s form{
+  margin: 0 2.5rem;
+}
+
+
+#back:checked ~ .form-container {
+  padding: 0;
 }
 
 #front, #back{

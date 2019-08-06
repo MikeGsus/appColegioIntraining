@@ -41,19 +41,60 @@ button{
   border-radius: 10px;
   padding: 5px 10px;
 }
+
 .btn-success{
   background: #5F7C99;
   color: #fff;
 }
+
 .btn-warning, .btn-success:hover{
   background: #fff;
   color: #5F7C99;
   border: 2px solid #5F7C99;
 }
+
 .btn-warning:hover{
   background: #99906B;
   color: #fff;
   border: 2px solid #99906B;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+.ico-fb {
+  content: url("../img/icons/l_fb.png");
+}
+
+.ico-em {
+  content: url("../img/icons/l_em.png");
+}
+
+.ico-ig {
+  content: url("../img/icons/l_ig.png");
+}
+
+.ico-ph {
+  content: url("../img/icons/l_ph.png");
+}
+
+.ico-tw {
+  content: url("../img/icons/l_tw.png");
+}
+
+.ico-yt {
+  content: url("../img/icons/l_yt.png");
+}
+
+.icons a {
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  width: 3em;
+  margin: 8px auto;
 }
 
 /* === Section Navbar === */

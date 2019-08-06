@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap');
 
 html {
@@ -269,11 +270,11 @@ button{
 /* === Section Level == */
 .level-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .level {
-  width: 25%;
+  width: 28%;
   text-align: center;
   color: #000;
 }

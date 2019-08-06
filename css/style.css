@@ -1,8 +1,8 @@
-
+@import "./reset.css";
 @import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap');
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
@@ -13,12 +13,16 @@ html {
 
 body {
   margin-top: 60px;
-  font-family: 'Open Sans';
   background-color: #FFF;
+  font-family: 'Open Sans';
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label {
   font-family: 'Nunito';
+}
+
+p, span, ul, ol, li, input, a{
+  font-family: 'Open Sans';
 }
 
 input, select, textarea {
@@ -103,16 +107,21 @@ button{
   height: 50px;
 }
 
+.nav-icon, #nab-m {
+  display: none;
+}
+
 .navbar-cont{
   background-color: #5F7C99;
   color: #fff;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   padding-top: 10px;
   position: fixed;
-  top: 0;
+  top: 0;fas
   left: 0;
   z-index: 10000;
 }
@@ -133,6 +142,59 @@ button{
 
 .nav li{
   list-style:none;
+}
+
+@media only screen and (max-width: 720px) {
+  .logo-cont {
+    margin-right: auto;
+    margin-left: 2%;
+  }
+
+  .navbar {
+    height: 0;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    padding: 1%;
+    background: #5f7c99;
+    transition: height .3s;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .6s;
+  }
+
+  .nav li {
+    width: 100%;
+    margin: 1% 2%;
+    display: none;
+  }
+
+  .nav-icon{
+    display: block;
+    margin-right: 2%;
+    cursor: pointer;
+  }
+
+  .ico-list {
+    content: url("../img/icons/list.png");
+    width: 30px;
+    border-radius: 3px;
+  }
+
+  #nab-m:checked ~ .navbar{
+    height: 190px;
+  }
+
+  #nab-m:checked ~ .navbar .nav ul{
+    opacity: 1;
+  }
+
+  #nab-m:checked ~ .navbar .nav li{
+    display: inherit;
+  }
 }
 
 
@@ -274,7 +336,7 @@ button{
 }
 
 .level {
-  width: 28%;
+  width: 27%;
   text-align: center;
   color: #000;
 }

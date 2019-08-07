@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6, label {
   font-family: 'Nunito';
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
 p, span, ul, ol, li, input, a{
   font-family: 'Open Sans';
 }
@@ -33,11 +37,24 @@ input, select, textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
+/* === FOOTER ===*/
 
 footer{
   background-color: #CFDAE6;
   color:#5F7C99;
-  margin: -0.5rem;
+}
+
+footer h4{
+  margin: 20px 0 15px 0;
+}
+
+footer button{
+  margin: 15px 0  20px 0;
+}
+
+.maps{
+  width: 100%;
+  height: 200px;
 }
 
 button{
@@ -330,7 +347,7 @@ button{
 }
 
 /* === Section Level == */
-.level-container {
+.level-container, .button-container {
   display: flex;
   justify-content: space-evenly;
 }
@@ -340,9 +357,11 @@ button{
   text-align: center;
   color: #000;
 }
+
 .level:hover {
   color: #5F7C99;
 }
+
  .container .level, .form-container {
    box-shadow: 0px 2px 7px #666;
    border-radius: 10px;
@@ -351,6 +370,20 @@ button{
    padding: 1rem;
  }
 
+ @media only screen and (max-width: 575px) {
+   .level-container{
+     flex-direction: column;
+   }
+
+   .level{
+     width: 80%;
+     margin: 0 auto;
+   }
+
+   footer button{
+     width: 25%;
+   }
+ }
 
 /* === Section about === */
 .about {

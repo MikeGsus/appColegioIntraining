@@ -441,7 +441,7 @@ p {
   width: 100%;
 }
 .form-container button{
-  margin: 2rem;
+  margin: 15px 5px;
 }
 
 .align-self-center{
@@ -673,6 +673,7 @@ main input:checked + label {
   top: 0px;
   left: 0px;
   width: 100%;
+  height: 50%;
   padding: 20px;
   transform: rotateY(-180deg);
   z-index: 0;
@@ -684,12 +685,21 @@ main input:checked + label {
   text-align: left !important;
 }
 
+#back-s form{
+  display: none;
+}
+
+#back:checked ~ #back-s form{
+  display: inherit;
+}
+
 #back:checked ~ #front-s {
   transform: rotateY(180deg);
   opacity: 0;
   z-index: 0;
   height: 720px;
 }
+
 #back:checked ~ #back-s {
   opacity: 1;
   z-index: 1000;
@@ -720,6 +730,23 @@ main input:checked + label {
 
 .icon-back svg {
   height: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .row{
+    flex-direction: column;
+  }
+  .information {
+    width: 100%;
+  }
+  .row .form-container{
+    width: 93%;
+    margin: 30px auto;
+  }
+
+  #front-s{
+    height: 250px;
+  }
 }
 
 /*=== Gallery ===*/

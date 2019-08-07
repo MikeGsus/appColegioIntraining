@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6, label {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin: 20px 0 15px 0;
 }
 
 p, span, ul, ol, li, input, a{
@@ -37,15 +38,22 @@ input, select, textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-/* === FOOTER ===*/
 
+p, ul, ol{
+  margin: 10px;
+}
+
+ul li{
+  list-style: disc;
+}
+
+ol li{
+  list-style: decimal;
+}
+/* === FOOTER ===*/
 footer{
   background-color: #CFDAE6;
   color:#5F7C99;
-}
-
-footer h4{
-  margin: 20px 0 15px 0;
 }
 
 footer button{
@@ -501,12 +509,8 @@ main input:checked + label {
   font-weight: bold;
 }
 @media screen and (max-width: 800px) {
-  main label {
-    font-size: 0;
-  }
   main label:before {
     margin: 0;
-    font-size: 18px;
   }
 }
 

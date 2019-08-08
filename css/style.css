@@ -1,6 +1,10 @@
+/* Import CSS file to reset styles */
 @import "./reset.css";
+
+/* Import Fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Nunito|Open+Sans&display=swap');
 
+/*=== General Styles ===*/
 html {
   box-sizing: border-box;
 }
@@ -30,13 +34,8 @@ p, span, ul, ol, li, input, a{
   font-family: 'Open Sans';
 }
 
-input, select, textarea {
-  width: 100%;
-  padding: 6px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+p {
+  text-align: justify;
 }
 
 p, ul, ol{
@@ -50,19 +49,14 @@ ul li{
 ol li{
   list-style: decimal;
 }
-/* === FOOTER ===*/
-footer{
-  background-color: #CFDAE6;
-  color:#5F7C99;
-}
 
-footer button{
-  margin: 15px 0  20px 0;
-}
-
-.maps{
+input, select, textarea {
   width: 100%;
-  height: 200px;
+  padding: 6px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button{
@@ -72,6 +66,16 @@ button{
   padding: 5px 10px;
 }
 
+footer{
+  background-color: #CFDAE6;
+  color:#5F7C99;
+}
+
+footer button{
+  margin: 15px 0  20px 0;
+}
+
+/* === Buttons === */
 .btn-success{
   background: #5F7C99;
   color: #fff;
@@ -89,31 +93,38 @@ button{
   border: 2px solid #99906B;
 }
 
+/* === Icons === */
 .icons {
   display: grid;
   grid-template-columns: 2fr 2fr;
 }
 
+/* Facebook icon */
 .ico-fb {
   content: url("../img/icons/l_fb.png");
 }
 
+/* Email icon */
 .ico-em {
   content: url("../img/icons/l_em.png");
 }
 
+/* Instagram icon */
 .ico-ig {
   content: url("../img/icons/l_ig.png");
 }
 
+/* Phone icon */
 .ico-ph {
   content: url("../img/icons/l_ph.png");
 }
 
+/* Twitter icon */
 .ico-tw {
   content: url("../img/icons/l_tw.png");
 }
 
+/* Youtube icon */
 .ico-yt {
   content: url("../img/icons/l_yt.png");
 }
@@ -127,7 +138,7 @@ button{
   margin: 8px auto;
 }
 
-/* === Section Navbar === */
+/* === Navbar === */
 .logo {
   height: 50px;
 }
@@ -146,7 +157,7 @@ button{
   width: 100%;
   padding-top: 10px;
   position: fixed;
-  top: 0;fas
+  top: 0;
   left: 0;
   z-index: 10000;
 }
@@ -222,8 +233,7 @@ button{
   }
 }
 
-
-/* === Section Carousel === */
+/* === Carousel === */
 .mySlider {
   position : relative;
 	display : block;
@@ -270,31 +280,43 @@ button{
 }
 
 .control {
-	  position: absolute;
-	  top: 50%;
-	  margin-top: -24px;
-	  z-index: 55;
+  position: absolute;
+  top: 50%;
+  margin-top: -24px;
+  z-index: 55;
 }
+
 .control label svg {
-	  width : 48px;
-	  height : 48px;
-	  fill : #000;
-	  stroke : currentColor;
-	  stroke-width : 0;
+  width : 48px;
+  height : 48px;
+  fill : #000;
+  stroke : currentColor;
+  stroke-width : 0;
 }
+
 .control label svg:hover {
 	  transition : all .2s ease;
 	  fill : #000;
 }
+
 .control label {
 	  z-index: 0;
 	  display: none;
 	  cursor: pointer;
-	  opacity: 0.1;
+	  opacity: 0.3;
 }
-.control label:hover { opacity: 1.0; }
-.next { right: 1%; }
-.previous { left: 1%; }
+
+.control label:hover {
+  opacity: 1.0;
+}
+
+.next {
+  right: 1%;
+}
+
+.previous {
+  left: 1%;
+}
 
 .slider-pagination {
   position: absolute;
@@ -304,6 +326,7 @@ button{
   text-align: center;
   z-index: 1000;
 }
+
 .slider-pagination label {
   width: 10px;
   height: 10px;
@@ -315,17 +338,33 @@ button{
   cursor: pointer;
 }
 
-.slide-radio1:checked ~ .next .numb2, .slide-radio2:checked ~ .next .numb3, .slide-radio3:checked ~ .next .numb1, .slide-radio2:checked ~ .previous .numb1, .slide-radio3:checked ~ .previous .numb2, .slide-radio1:checked ~ .previous .numb3 {
+.slide-radio1:checked ~ .next .numb2,
+.slide-radio2:checked ~ .next .numb3,
+.slide-radio3:checked ~ .next .numb1,
+.slide-radio2:checked ~ .previous .numb1,
+.slide-radio3:checked ~ .previous .numb2,
+.slide-radio1:checked ~ .previous .numb3 {
   display: block;
   z-index: 1;
 }
-.slide-radio1:checked ~ .slider-pagination .page1, .slide-radio2:checked ~ .slider-pagination .page2, .slide-radio3:checked ~ .slider-pagination .page3 { background: rgba(255,255,255,1) }
 
-.slide-radio1:checked ~ .slider { transform: translateX(0%); }
+.slide-radio1:checked ~ .slider-pagination .page1,
+.slide-radio2:checked ~ .slider-pagination .page2,
+.slide-radio3:checked ~ .slider-pagination .page3 {
+  background: rgba(255,255,255,1)
+}
 
-.slide-radio2:checked ~ .slider { transform: translateX(-100%); }
+.slide-radio1:checked ~ .slider {
+  transform: translateX(0%);
+}
 
-.slide-radio3:checked ~ .slider { transform: translateX(-200%); }
+.slide-radio2:checked ~ .slider {
+  transform: translateX(-100%);
+}
+
+.slide-radio3:checked ~ .slider {
+  transform: translateX(-200%);
+}
 
 .slider img{
   width: 100%;
@@ -338,13 +377,18 @@ button{
     width : 100%;
     height : 400px;
   }
-  .slider > div { padding: 0 2% }
+
+  .slider > div {
+    padding: 0 2%
+  }
+
   .control {
     position: absolute;
     top: 60%;
     margin-top: -24px;
     z-index: 55;
   }
+
   .control label svg {
     width : 32px;
     height : 32px;
@@ -354,7 +398,7 @@ button{
   }
 }
 
-/* === Section Level == */
+/* === Levels (Index) == */
 .level-container, .button-container {
   display: flex;
   justify-content: space-evenly;
@@ -370,39 +414,35 @@ button{
   color: #5F7C99;
 }
 
- .container .level, .form-container {
-   box-shadow: 0px 2px 7px #666;
-   border-radius: 10px;
-   background-color: #E6E1CF;
-   margin-top: 3rem;
-   padding: 1rem;
- }
+.container .level, .form-container {
+  box-shadow: 0px 2px 7px #666;
+  border-radius: 10px;
+  background-color: #E6E1CF;
+  margin-top: 3rem;
+  padding: 1rem;
+}
 
- @media only screen and (max-width: 575px) {
-   .level-container{
-     flex-direction: column;
-   }
+@media only screen and (max-width: 575px) {
+  .level-container{
+    flex-direction: column;
+  }
 
-   .level{
-     width: 80%;
-     margin: 0 auto;
-   }
+  .level{
+    width: 80%;
+    margin: 0 auto;
+  }
 
-   footer button{
-     width: 25%;
-   }
- }
+  footer button{
+    width: 25%;
+  }
+}
 
-/* === Section about === */
+/* === About Us (Index) === */
 .about {
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0px 2px 7px #666;
-}
-
-p {
-  text-align: justify;
 }
 
 .about section {
@@ -423,38 +463,15 @@ p {
   background-color: #FFF;
   border: 1px solid #5F7C99;
 }
-/*===Section Kinder === */
-.row{
-  display: flex;
-  margin: 5rem;
-}
-.information{
-  width: 60%;
-}
-.form-container{
-  display: grid;
-  width: 40%;
-  justify-content: center;
-}
-.form-container img, img{
-  object-fit: cover;
-  width: 100%;
-}
-.form-container button{
-  margin: 15px 5px;
-}
 
-.align-self-center{
-  align-self: center;
-}
-
-/* === About Us === */
+/* === About Us (Page) === */
 .about-us{
   display: flex;
   width: 100%;
   justify-content: center;
   padding-bottom: 20px;
 }
+
 main {
   max-width: 100%;
   padding: 40px 60px;
@@ -505,6 +522,11 @@ main input:checked + label {
   display: block;
 }
 
+#mission, #vission, #objetive, #valors {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 #valors span{
   font-weight: bold;
 }
@@ -538,7 +560,8 @@ main input:checked + label {
   position: relative;
 }
 
-.organigrama li::before, .organigrama li::after {
+.organigrama li::before,
+.organigrama li::after {
 	content: '';
 	position: absolute;
   top: 0px;
@@ -554,7 +577,8 @@ main input:checked + label {
 	border-left: 1px solid #5F7C99;
 }
 
-.organigrama li:only-child::before, .organigrama li:only-child::after {
+.organigrama li:only-child::before,
+.organigrama li:only-child::after {
 	display: none;
 }
 
@@ -562,7 +586,8 @@ main input:checked + label {
   padding-top: 0;
 }
 
-.organigrama li:first-child::before, .organigrama li:last-child::after{
+.organigrama li:first-child::before,
+.organigrama li:last-child::after{
 	border: 0 none;
 }
 
@@ -621,7 +646,36 @@ main input:checked + label {
   width: 8em;
 }
 
-/* === Education levels form === */
+/* === Levels (Pages) === */
+.row{
+  display: flex;
+  margin: 5rem;
+}
+
+.information{
+  width: 60%;
+}
+
+.form-container{
+  display: grid;
+  width: 40%;
+  justify-content: center;
+}
+
+.form-container img, img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.form-container button{
+  margin: 15px 5px;
+}
+
+.align-self-center{
+  align-self: center;
+}
+
+/* === Inscription Forms === */
 #kinder .form-container,
 #elementary .form-container,
 #secondary .form-container {
@@ -861,18 +915,15 @@ main input:checked + label {
     transition: transform 0.4s, opacity 0.1s;
     width: 100%;
   }
-
 }
-/*=== /Gallery ===*/
 
+/* === Footer === */
+.maps{
+  width: 100%;
+  height: 200px;
+}
 
-/*=== Contactanos ===*/
 .form-control {
   text-align: justify !important;
   margin-top: 10px;
-}
-
-.row #mission, .row #vission, .row #objetive, .row #valors {
-  margin-left: 10px;
-  margin-right: 10px;
 }

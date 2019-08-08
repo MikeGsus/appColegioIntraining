@@ -141,6 +141,7 @@ footer button{
 /* === Navbar === */
 .logo {
   height: 50px;
+  width: 60px;
 }
 
 .nav-icon, #nab-m {
@@ -472,6 +473,10 @@ footer button{
   padding-bottom: 20px;
 }
 
+.about-us .container{
+  width: 100%;
+}
+
 main {
   max-width: 100%;
   padding: 40px 60px;
@@ -530,6 +535,7 @@ main input:checked + label {
 #valors span{
   font-weight: bold;
 }
+
 @media screen and (max-width: 800px) {
   main label:before {
     margin: 0;
@@ -540,6 +546,16 @@ main input:checked + label {
   main label {
     padding: 15px;
   }
+}
+
+.organigrama{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.organigrama>ul{
+  flex: 0 0 auto;
 }
 
 .organigrama * {
@@ -805,12 +821,13 @@ main input:checked + label {
 
 /*=== Gallery ===*/
 #gallery{
-  display: grid;
-  margin-left: 60px;
-  margin-right: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px;
 }
 
 #gallery .form-container{
+  flex: 1 0 50%;
   display: inline-block;
   width: 60%;
   height: 75vh;
@@ -838,7 +855,7 @@ main input:checked + label {
   position: relative;
   height: 100%;
   max-width: 100%;
-  transition: width 0.4, transform 0.4s;
+  transition: width 0.4s, transform 0.4s;
 }
 #gallery .form-container:hover figure img{
   transform: translateX(100%);
